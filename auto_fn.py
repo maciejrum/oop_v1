@@ -1,9 +1,13 @@
 # auto - brand, speed, max_speed, engine
 
-bmw = {'brand': 'BMW',
-       'speed': 0,
-       'max_speed': 250,
-       'engine': False}
+
+def auto_factory(brand, max_speed):
+    return {
+        'brand': brand,
+        'speed': 0,
+        'max_speed': max_speed,
+        'engine': False
+    }
 
 
 def start_engine(car):
@@ -32,14 +36,7 @@ def decelerate(car, speed):
     print('Speed: {}'.format(car['speed']))
 
 
-def auto_factory(brand, max_speed):
-    return {
-        'brand': brand,
-        'speed': 0,
-        'max_speed': max_speed,
-        'engine': False
-    }
-
+bmw = auto_factory('BMW', 200)
 
 accelerate(bmw, 100)
 start_engine(bmw)
